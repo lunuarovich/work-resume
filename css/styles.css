@@ -1,187 +1,211 @@
-/* Montserrat: CSS class for a variable style // <weight>: Use a value from 100 to 900
-// <uniquifier>: Use a unique and descriptive class name
-
-.montserrat-<uniquifier> {
-    font-family: "Montserrat", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: <weight>;
-    font-style: normal;
-}
-
-Open Sans: CSS class for a variable style // <weight>: Use a value from 300 to 800
-// <uniquifier>: Use a unique and descriptive class name
-
-.open-sans-<uniquifier> {
-    font-family: "Open Sans", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: <weight>;
-    font-style: normal;
-    font-variation-settings:
-        "wdth" 100;
-} */
-
+/* ===== BASE ===== */
 body {
     font-family: "Open Sans", sans-serif;
-    background-color: #ffffff;
-    color: #434455;
-    background-color: #f6f6fa;
+    background: #f6f6fa;
+    color: #222;
+    margin: 0;
 }
 
 h1,
 h2,
-h3,
-h4,
-h5,
-h6,
-p {
-    margin: 0;
-    line-height: 1.71429;
+p,
+ul {
+    margin: 0 0 12px;
+}
+
+h1 {
+    font-family: "Montserrat", sans-serif;
+    font-size: 36px;
+    font-weight: 700;
 }
 
 h2 {
     font-family: "Montserrat", sans-serif;
+    font-size: 22px;
+    margin-bottom: 12px;
     font-weight: 600;
-    font-size: 24px;
-    line-height: 1.2;
+}
+
+p {
+    line-height: 1.3;
+    letter-spacing: 0.02em;;
+}
+
+li {
+    line-height: 1.3;
     letter-spacing: 0.02em;
 }
 
 ul {
     list-style: none;
-    margin: 0;
     padding: 0;
 }
 
 a {
-    font-style: normal;
-    color: #434455;
+    color: #0067c0;
+    text-decoration: none;
 }
 
-img {
-    display: block;
-    max-width: 100%;
-    height: auto;
+a:hover {
+    opacity: 0.7;
 }
 
 .wrapper {
-    position: relative;
-    padding: 64px 34px;
-    width: 1280px;
-    background-color: #ffffff;
+    max-width: 960px;
+    background: #fff;
+    padding: 36px;
     margin: 24px auto;
-    box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08), 0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 1px 6px 0 rgba(46, 47, 66, 0.08);
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+    position: relative;
 }
 
+/* ===== LANGUAGE SWITCH ===== */
 .lang-switch {
-    padding: 7px;
     position: absolute;
-    top: 64px;
-    right: 34px;
-    border: 1px solid #000;
-    border-radius: 4px;
-    box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08), 0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 1px 6px 0 rgba(46, 47, 66, 0.08);
-    background-color: #efefef;
-    transition: opacity 350ms cubic-bezier(0.4, 0, 0.2, 1);
+    top: 24px;
+    right: 24px;
+    padding: 6px 12px;
+    background: #efefef;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    transition: 0.3s;
 }
 
-.lang-switch:hover, .lang-switch:focus {
-    opacity: 0.5;
+.lang-switch:hover {
+    opacity: .6;
 }
 
-/* Header */
+/* ===== HEADER ===== */
 .header {
-    margin-bottom: 44px;
+    margin-bottom: 32px;
 }
 
-.container-header {
+.subtitle {
+    font-size: 20px;
+    font-family: "Montserrat";
+    margin-bottom: 24px;
+}
+
+.header-flex {
     display: flex;
-    gap: 28px;
-}
-
-.hero-title {
-    font-family: "Montserrat", sans-serif;
-    font-weight: 600;
-    font-size: 32px;
-    line-height: 1.07143;
-    letter-spacing: 0.02em;
-    margin-bottom: 14px;
+    flex-wrap: wrap;
+    gap: 18px;
 }
 
 .header-list {
     display: flex;
-    gap: 28px;
+    gap: 16px;
+    flex-wrap: wrap;
 }
 
-.address-list {
+.nav-link {
+    border: 1px solid #2a2a2a;
+    border-radius: 4px;
+    padding: 4px;
+}
+
+/* ===== UNIVERSAL SPACING ===== */
+.section {
+    margin-bottom: 32px;
+}
+
+.skills-flex {
     display: flex;
-    gap: 28px;
+    gap: 80px;
+    margin-bottom: 16px;
 }
 
-/* Summary */
-.summary-section {
-    margin-bottom: 24px;
-}
-
-/* Skill */
-.skills-section {
-    margin-bottom: 24px;
-}
-
-.skills-container {
-    display: flex;
-    gap: 124px;
-    margin-bottom: 14px;
-}
-
-.skills-list {
-    display: flex;
-    flex-direction: column;
-    gap: 7px;
-}
-
-/* Project experience */
-.project-experience {
+.bullet-list {
+    list-style: disc;
+    padding-left: 20px;
+    margin-bottom: 16px;
     display: flex;
     flex-direction: column;
     gap: 7px;
-    margin-bottom: 24px;
 }
 
-.proj-exp-list {
+/* ===== WORK EXPERIENCE ===== */
+.exp-header {
     display: flex;
-    flex-direction: column;
-    gap: 7px;
-    list-style: inside;
+    justify-content: space-between;
+    font-weight: 600;
+    margin-bottom: 12px;
 }
 
-/* Work experience */
-.work-experience {
-    display: flex;
-    flex-direction: column;
-    gap: 7px;
-    margin-bottom: 24px;
+.exp-position {
+    font-size: 18px;
 }
 
-.work-exp-pos-list {
-    display: flex;
-    gap: 84px;
+.exp-dates {
+    opacity: 0.8;
 }
 
-.work-exp-list {
+/* ===== FOOTER ===== */
+.footer {
     display: flex;
-    flex-direction: column;
-    gap: 7px;
-    list-style: inside;
+    justify-content: space-between;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid #ddd;
 }
 
-/* Footer */
-.footer-container {
-    display: flex;
-    gap: 400px;
+/* ============================================================
+   TABLET ADAPTATION (768–1024px)
+============================================================ */
+@media (max-width: 1024px) {
+    .wrapper {
+        padding: 28px;
+    }
+
+    .skills-flex {
+        gap: 40px;
+    }
+
+    .footer {
+        flex-direction: column;
+        gap: 20px;
+    }
 }
 
-.education-languages {
-    display: flex;
-    flex-direction: column;
-    gap: 7px;
+/* ============================================================
+   MOBILE ADAPTATION (<= 767px)
+============================================================ */
+@media (max-width: 767px) {
+    .wrapper {
+        padding: 22px;
+    }
+
+    h1 {
+        font-size: 28px;
+    }
+
+    .subtitle {
+        font-size: 18px;
+    }
+
+    .header-flex {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .skills-flex {
+        flex-direction: column;
+        gap: 18px;
+    }
+
+    .exp-header {
+        flex-direction: column;
+        gap: 4px;
+    }
+
+    .footer {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .lang-switch {
+        right: 18px;
+        top: 18px;
+    }
 }
